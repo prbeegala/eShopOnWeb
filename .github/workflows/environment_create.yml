@@ -5,9 +5,11 @@ permissions:
   contents: read
 
 on:
-  create:
-  pull_request:
-    types: [opened, reopened]
+  branch_protection_rule:
+   types: [created, deleted]
+  #create:
+  #pull_request:
+    #types: [opened, reopened]
 
 concurrency: ${{ github.event.number || github.ref_name }}
 
