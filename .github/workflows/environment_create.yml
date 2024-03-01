@@ -4,9 +4,9 @@ permissions:
   id-token: write
   contents: read
 
-on:
-  branch_protection_rule:
-   types: [created, deleted]
+on: [push, pull_request, workflow_dispatch]
+  #branch_protection_rule:
+   #types: [created, deleted]
   #create:
   #pull_request:
     #types: [opened, reopened]
